@@ -30,9 +30,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
 	'www.manaretreat.center',
 	'manaretreat.center',
-	'127.0.0.1'
-    	'143.198.79.233',
-	
+	'127.0.0.1',
+    '143.198.79.233',
 	]
 
 
@@ -135,25 +134,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static'),
-  '/Users/ccnorman/websites/manahouse/static/',
+  '/Users/mana/website/manaretreatcenter/static/',
 )
 APPEND_SLASH = False
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/home/ubuntu/manaretreat.center/log/django/error.log', 
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
 
+import mana_retreat_center.local_settings
