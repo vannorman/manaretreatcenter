@@ -137,5 +137,4 @@ STATICFILES_DIRS = (
   '/Users/mana/website/manaretreatcenter/static/',
 )
 APPEND_SLASH = False
-
 import mana_retreat_center.local_settings

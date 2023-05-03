@@ -2,3 +2,4 @@
 *.swo
 local_settings.py
 venv/**
+error.log
