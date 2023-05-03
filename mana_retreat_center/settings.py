@@ -138,22 +138,5 @@ STATICFILES_DIRS = (
   '/Users/ccnorman/websites/manahouse/static/',
 )
 APPEND_SLASH = False
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/home/ubuntu/manaretreat.center/log/django/error.log', 
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
+import mana_retreat_center.local_settings
 
