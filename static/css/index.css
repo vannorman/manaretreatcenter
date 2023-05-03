@@ -1,5 +1,6 @@
 html {
     overflow-x:hidden;
+    width:100%;
 }
 
 html, body, * {
@@ -90,7 +91,8 @@ html, body, * {
     transition:all 0.4s;
 }
 #top2 .item .text:hover{ background-color:#0009}
-#old, #btnDesc {
+#btnDesc, #old {
+    padding:35px;
     position:absolute;
 
 }
@@ -102,7 +104,7 @@ display: flex;
   border: 3px solid green;
     position: relative;
     margin: 0 auto;
-    top: 50px;
+    margin-top: 50px;
     padding:30px;
     height: 190px;
     width: 660px;
@@ -133,9 +135,9 @@ display: flex;
     display:inline-block;
     text-align: justify;
   text-justify: inter-word;
-    top:0;
+    width:700px;
+  top:0;
    position:relative;
-    width:85%;
     font-size:1.5em;
     margin:0 auto;
 }
@@ -143,19 +145,25 @@ display: flex;
 
 #map {
    position:relative;
-   top:30px;
+   top:40px;
     width: 800px;
-    height:352px;
-    display:inline-block;
+    height:482px;
+    display:block;
+    margin:0 auto;
     background-image:url('/static/img/map.jpg'); 
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
 }
-
+#map::after{
+    clear:both
+}
 #mapDesc {
+display:block;
+text-align:center;
+    font-size:1.2em;
     position:relative;
-    top:50px;
+    margin:0 auto;
 }
 
 
@@ -176,11 +184,9 @@ display: flex;
 .title2 {
     font-size:2.5em;
     position:relative;
-    top:90px;
+    margin-top:120px;
     font-family:proximaNova;
     text-align:center;
-    margin-bottom:40px;
-    margin-top:70px;
     height:55px;    
 }
 
@@ -247,7 +253,6 @@ display: flex;
     width:600px;
     margin:0 auto;
     font-size:1.1em;
-    margin-top:300px;
 }
 #faq h1{ text-align:center; font-size:2.5em;font-weight:bold;}
 
@@ -265,21 +270,17 @@ display: flex;
     vertical-align:top;
     margin: 10px;
     display: inline-block;
-    width:290px;
-    height:420px;
+    width:190px;
+    height:320px;
     outline:1px dotted gray;
 }
-#team .member img { width:250px;height:250px;border-radius:125px;margin:15px auto 0 auto;}
+#team .member img { width:150px;height:150px;border-radius:125px;margin:15px auto 0 auto;}
 
 
 
 @font-face {
     font-family: proximaNova;
     src: url(/static/fonts/proximaNovaFlower-Regular.ttf);
-}
-@font-face {
-    font-family: cloisterBlack;
-    src: url(/static/fonts/CloisterBlack.ttf);
 }
 @font-face {
     font-family: proximaNova;
@@ -333,13 +334,6 @@ display: flex;
 .tile:nth-child(5){
     grid-column: span 3;
 }
-@media screen and (max-width: 850px){
-    #btnDesc, #old {
-        width:80%;
-        font-size:1em;
-    }
-}
-
 .apply
 {
 
@@ -529,4 +523,32 @@ cursor:pointer;
     background: repeating-linear-gradient( #777a, #777a 2px, #0000 2px, #0000 4px );
     pointer-events:none;
 }
+
+@media screen and (max-width: 850px){
+    #btnDesc, #old {
+        width:70%;
+        font-size:0.8em;
+    }
+    #btns {
+        width:80%;
+    }
+    #brief {
+        width:75%;
+    }
+}
+
+@media screen and (max-width: 460px){
+    #btnDesc, #old {
+        width:70%;
+        font-size:0.6em;
+    }
+    #btns {
+        width:80%;
+    }
+    #brief {
+        width:75%;
+    }
+}
+
+
 

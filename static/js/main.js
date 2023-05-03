@@ -41,29 +41,15 @@ $(document).ready(function(){
         if (ww < 875){
             $('iframe').attr('height',wh).attr('width',wh*ar).css('left',(ww - (wh*ar))/2);
         } else {
-            console.log('ww:'+ww+', wh*ar:'+(wh*ar));
             $('iframe').attr('width',ww + (ww - (wh*ar))).attr('height',ww/ar).css('left',-(ww - (wh * ar))/2);
-
         }
-        return;
-        if (ww / (wh - th) > ar){
-            // window was "too wide" so make height limiting facator
-            $('iframe').attr('height',wh-th).attr('width',(wh-th)*ar);
-            console.log('a');
-        } else {
-            console.log('b');
-            // window was "too tall" so make width limiting facator
-            $('iframe').attr('width',ww).attr('height',(ww/ar));
-
-        }
-
-
     }
 
     var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
 
     player.on('play', function() {
+        $('#videoPlay').hide();
       console.log('Played the video');
     });
 
