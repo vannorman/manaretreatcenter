@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    mana = $('#btnDesc').html();
     $(window).on('resize', function(){
         ResizeVid();
         // window too tall
@@ -7,17 +8,18 @@ $(document).ready(function(){
         let txt = "With 5 acres of tropical soil at our disposal, imagine bananas, goats, avocados, chickens, and more — What would you help us grow?<br>🫑🥔🥒🥕🍅🐄🐖🌻🧺🌾";
         FadeShow(txt);
    });
-    $('#perm').on('click',function(){
-        let txt = 'Help tend the land';
-        FadeShow(txt);
-    });
     $('#retreat').on('click',function(){
-        let txt = "Co-create an amazing tropical getaway";
+        let txt = "The campus is mostly undeveloped now, and we have plans for domes, decks, and more — What would you like to build together? <br> 🪚🪵🪓🗜️🏡";
 
         FadeShow(txt);
     });
-    $('#eco').on('click',function(){
-        let txt = 'Live in an awesome tech enabled remote community with Starlink';
+    $('#tech').on('click',function(){
+        let txt = 'Amenities include 250 Mbps Starlink, dedicated coworking desks, fresh local coffee, and the San Juan Tech and Web3 scene.<br> 🖥️👨‍💻📱👩‍💻💻🕹️🖨️⚡📡';
+        FadeShow(txt);
+    });
+
+    $('#mana').on('click',function(){
+        let txt = mana;
         FadeShow(txt);
     });
 
