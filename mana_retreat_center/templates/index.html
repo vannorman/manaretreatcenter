@@ -8,9 +8,12 @@
         <div class="sub">Vega Alta, Puerto Rico</div>
     </div>
 </div>
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/823063461?h=ce4bc70846&autoplay=0&loop=1&title=0&byline=0&portrait=0&autopause=0&muted=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-<div id="videoCover" ></div>
+<div id="vid">
+    <iframe style="position:relative;" src="https://player.vimeo.com/video/823063461?h=ce4bc70846&title=0&byline=0&portrait=0&muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
+</div>
+    <div id="videoCover" ></div>
+    <div id="videoPlay" ></div>
 
 
 <!-- Summary -->
@@ -23,32 +26,35 @@
     </div>
 </div>
 <div id="top2">
-    <div class="item food"> 
+    <div class="item food" id="food"> 
         <div class="bg">
         </div>
         <div class="text">
             Food Forests
         </div>
     </div>
-     <div class="item perm"> 
+     <div class="item perm" id="perm"> 
         <div class="text">
             Permaculture
         </div>
     </div>
-     <div class="item retreat"> 
+     <div class="item retreat" id="retreat"> 
         <div class="text">
             Retreat Center
         </div>
     </div>
-     <div class="item eco"> 
+     <div class="item eco" id="eco"> 
         <div class="text">
-            Eco Tourism
+            Eco Coliving
         </div>
     </div>
-
-    <div id="map"></div>
-    <div id="mapDesc">Secluded and private, yet close to everything</div>
-
+    
+    <div id="btns">
+        <div id="btnDesc" style="">
+            Click a btn 
+        </div>
+        <div id="old"></div>
+    </div>
 
 </div>
 
@@ -72,6 +78,9 @@
         <img src="{% static "img/8.jpg" %}" alt="">
     </div>
 </div>
+ 
+    <div id="map"></div>
+    <div id="mapDesc">Secluded and private, yet close to everything</div>
 
 
 <div id="opps">
@@ -202,10 +211,10 @@
     
     </div>
     <div class="member">
-        <img src="/static/img/dog.jpg" />
-        <h2> Jackson </h2>
-        Fuzzy buddy
-        <br> Goodest boy 
+        <img src="/static/img/sam.jpg" />
+        <h2> Sam Albertsen </h2>
+        Chief Investment Analyst
+        <br> Orchestrator of Fun
     </div>
     <div class="member">
             <img src="/static/img/charlie.jpg" />
@@ -233,5 +242,8 @@
     <div class="title2">Mana House</div>
     <div style="text-align:center;">Contact: Charlie 650-695-8930</div>
 <div id="footer"> Round Rock, TX </div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="/static/js/jquery-min.js"></script>
+<script src="/static/js/main.js"></script>
 <script src="/static/js/faq.js"></script>
 
