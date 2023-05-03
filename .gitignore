@@ -2,4 +2,8 @@
 *.swo
 local_settings.py
 venv/**
+venv
+venv/
+/venv/
+/venv
 error.log
