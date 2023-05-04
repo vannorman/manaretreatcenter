@@ -16,7 +16,7 @@ $(document).ready(function(){
         FadeShow(txt);
    });
     $('#retreat').on('click',function(){
-        let txt = "The campus is mostly undeveloped now, and we have plans for domes, decks, and more — What would you like to build together? <br> 🪚🪵🪓🗜️🏡";
+        let txt = "Domes, decks, treehouses, pool, and more — Co-create a healing and regenative sanctuary. What would you like to build together? <br> 🪚🪵🪓🗜️🏡";
 
         FadeShow(txt);
     });
@@ -46,9 +46,8 @@ $(document).ready(function(){
         wh = window.mobileCheck() == true ? screen.height * .7 : window.innerHeight * .7;
         ww = window.mobileCheck() == true ? screen.width : window.innerWidth;
         $('#videoCover').css('height',wh);
-        console.log('wh,ww:'+wh+','+ww);
         ar = 1.777778;
-        $('#debug').text('w:'+screen.width);
+        //$('#debug').text('w:'+screen.width);
         if (ww < 875){
             $('iframe').attr('height',wh).attr('width',wh*ar).css('left',(ww - (wh*ar))/2);
         } else {
@@ -74,6 +73,42 @@ $(document).ready(function(){
     });
 
 
+    // Animate carousel pics
+    $('.thumbsContainer .thumb').each(function(){
+        i = $(this).index() + 1;
+        $(this).css('background-image','url(/static/img/'+i+'.jpg)');
+    });
+    var md = window.mobileCheck() ? 0.15 * screen.width  : 0.15 * window.innerWidth ;
+    var maxLeft = (window.innerWidth * 0.6 * -1) + 5; 
+    var minLeft = (window.innerWidth * 0.6) * Math.ceil($('.thumbsContainer .thumb').length / 4 - 2) * -1;
+    md *= 4;
+    animating = false;
+    $('#under .left').on('click',function(){
+        if (animating) return;
+        animating = true;
+        left = parseInt($('#under .thumb').css('left'));
+        console.log('l:'+left+', ml:'+maxLeft);
+        if (left < maxLeft){
+            $('#under .thumb').animate({left:left+md},300).promise().done(function(){
+//                console.log('left:'+$('#under .thumb').css('left'));
+                animating = false;
+            }); 
+            
+        }
+    });
+    $('#under .right').on('click',function(){
+        if (animating) return;
+        animating = true;
+        left = parseInt($('#under .thumb').css('left'));
+        console.log('l:'+left+', ml:'+minLeft);
+        if (left > minLeft){
+            $('#under .thumb').animate({left:left-md},300).promise().done(function(){
+//                console.log('left:'+$('#under .thumb').css('left'));
+                animating = false;
+            }); 
+        }
+    });
+    
 
 });
 

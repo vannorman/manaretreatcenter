@@ -570,23 +570,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb6d6', end
     outline:1px dotted black;
     background-size:contain;
     background-repeat:no-repeat;
+    background-position:center;
 }
 #under {
-    display:table;
     text-align:center;
     vertical-align:top;
+    letter-spacing: -3px;
+    word-spacing: -3px;
+}
+
+
+#under .thumbsContainer {
+    display:inline-block;
+    width:60vw;
+    max-width:60vw;
+    white-space: nowrap;
+    overflow:hidden;
 }
 #under .thumbs {
-    display:inline-flex;
-    overflow-x:scroll;
-    width:80vw;
-    max-width:80vw;
-    margin: 0 auto;
+    width:auto;
+    
 }
-#under .left, #under .right, #under .thumb {
-    display:inline-flex; width:15vw; height: 15vw; outline:1px solid red; 
+#under .left, #under .right{ 
+    display:inline-block; width:15vw; height: 15vw; 
+    outline:1px solid red; 
 }
-#under .thumb:hover { 
+.thumbsContainer .thumb { 
+    display:inline-block;
+    position:relative;
+    width:15vw;
+    height:15vw;
+    background-size:cover;
+    background-position:center;
+
+    outline:1px solid red; 
+}
+.thumbsContainer .thumb:hover, #under .left:hover, #under .right:hover { 
     cursor:pointer;
     opacity:0.8;
 }
