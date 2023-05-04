@@ -1,9 +1,6 @@
 git add .
 git commit -m $1
 git push
-source ~/.ssh/main.sh  
-cd manaretreat.center
-git pull
-sudo /etc/init.d/apache2 restart
+ssh -i ~/.ssh/fresh_cut_shirts.pem -t root@143.198.79.233 "cd /home/ubuntu/manaretreat.center; git pull; sudo service apache2 restart;"
 
 
