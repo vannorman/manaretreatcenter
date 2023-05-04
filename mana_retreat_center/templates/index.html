@@ -1,4 +1,7 @@
 {% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<body>
 <title> Mana Retreat Center</title>
 <link rel="shortcut icon" type="image/png" href="/static/img/potion.png">
 <link rel="stylesheet" href="/static/css/index.css?{{ now  }}" />
@@ -12,7 +15,6 @@
     <iframe style="position:relative;" src="https://player.vimeo.com/video/823063461?h=ce4bc70846&title=0&byline=0&portrait=0&muted=1&loop=1&repeat=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 </div>
-    <div id="videoCover" ></div>
     <div id="videoPlay" ></div>
 
 
@@ -45,6 +47,23 @@
 
 </div>
 
+<!-- Carousel -->
+<div id="carousel">
+    <style>
+    </style>
+    <div class="image"></div>
+    <div id="under">
+        <div class="left"></div>
+        <div class="thumbs">
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+        </div>
+        <div class="right"></div>
+    </div>
+</div>
+
+
 
 <!-- Mosaic -->
 <div class="container">
@@ -64,8 +83,8 @@
         <img src="{% static "img/8.jpg" %}" alt="">
     </div>
 </div>
-    <div id="map"></div>
-    <div id="mapDesc">⇢ Secluded and private, yet close to everything ⇠</div>
+<div id="map"></div>
+<div id="mapDesc">⇢ Secluded and private, yet close to everything ⇠</div>
 <div id="opps">
     <div class="opp">
         <h1>Resident</h1>
@@ -179,4 +198,5 @@
 <script src="/static/js/jquery-min.js"></script>
 <script src="/static/js/main.js"></script>
 <script src="/static/js/faq.js"></script>
-
+</body>
+</html>
