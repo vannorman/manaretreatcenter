@@ -5,6 +5,8 @@ html {
     width:100%;
     max-width:100%;
     top:0;left:0;
+    height: auto;
+    min-height: 100%;
 }
 
 body {
@@ -42,17 +44,16 @@ body {
     height:auto;
     text-align:center;
     background-color:white;
-    top:60px;
     }
 #top2 .item {
     display:inline-block;
     position:relative;
-    margin: 0 2%;
-    width:150px;
-    height:150px; 
+    margin: 0 1%;
+    width:100px;
+    height:100px; 
     border:2px solid #444;
     border-radius:50%;
-    top:5px;
+    top:35px;
     vertical-align: middle;
     text-align:center;
     font-size:1.2em;
@@ -66,6 +67,11 @@ body {
     cursor:pointer;
     transform: scale(103%);
     background-color:#0004;
+}
+
+#top2 .selected {
+    outline: 3px dashed black;
+    transform:scale(1.05);
 }
 #top2 .bg {
     position:absolute;
@@ -85,6 +91,16 @@ body {
 }
 #top2 .tech {
     background-image:url(/static/img/tech.jpg);
+}
+#top2 .mana {
+    background-image:url(/static/img/potion.png);
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
 }
 
 
@@ -183,7 +199,7 @@ text-align:center;
 .title2 {
     font-size:2.5em;
     position:relative;
-    margin-top:120px;
+    margin-top:100px;
     font-family:proximaNova;
     text-align:center;
     height:55px;    
@@ -400,13 +416,12 @@ cursor:pointer;
 }
 
 #footer {
-    height:100px;
+    height:350px;
     font-size:1.5em;
     text-align:center;
-    margin:-15px;
-    margin-top:40px;
-    padding-bottom:80px;
-    border-bottom:80px solid gray;
+
+    margin-top:140px;
+    background:#777;
 }
 
 #opps {
@@ -428,7 +443,7 @@ cursor:pointer;
     display:inline-block;
     vertical-align: top;
     width:370px;
-    height:320px;
+    height:340px;
     margin:20px;
     margin-bottom:20px;
     border:1px solid #777;
@@ -488,13 +503,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb6d6', end
     opacity:0.8;
 }
 
-#carousel{ 
-    width:100%; height:600px; 
+.carousel {  
+    width:100%; 
     position: relative;
-    margin-top: 80px;
     text-align:center;
 }
-#carousel .image{
+.carousel .image{
     width:80vw;
     display:inline-block;
     margin: 0 auto;
@@ -504,25 +518,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb6d6', end
     background-repeat:no-repeat;
     background-position:center;
 }
-#carousel .navLeft {
-    display:inline-block;
-    position:relative;
+.carousel .navLeft, .carousel .navRight{
+    position:absolute;
+    left:0;
+    top:25%;
+    width:10vw;
+    height:60vw;
     font-size:3em;
-    top:-180px;
-    margin:0 auto;
 }
-#carousel .navLeft:hover, #carousel .navRight:hover{
+.carousel .navRight{
+    left:90vw;
+}
+.carousel .navLeft:hover, .carousel .navRight:hover{
     cursor:pointer;
     opacity:0.8;
 }
-#carousel .navRight{
-    display:inline-block;
-    position:relative;
-    top:-180px;
-    margin: 0 auto;
-    font-size:3em;
-}
-#carousel .image::after:hover {
+.carousel .image::after:hover {
     cursor:pointer;
 }
 #under {
@@ -545,16 +556,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb6d6', end
     
 }
 #under .left, #under .right{ 
-    display:inline-block; width:15vw; height: 15vw; 
-        line-height: 1.5em;
-    font-size: 5em;
+    display:inline-block; width:5vw; height: 5vw; 
+    line-height: 10vw;
+    font-size: 2em;
     vertical-align: top;
 }
 .thumbsContainer .thumb { 
     display:inline-block;
     position:relative;
-    width:15vw;
-    height:15vw;
+    width:10vw;
+    height:10vw;
     background-size:cover;
     background-position:center;
 
