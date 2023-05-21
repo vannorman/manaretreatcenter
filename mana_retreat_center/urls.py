@@ -21,6 +21,12 @@ from django.urls import path
 urlpatterns = [
 	url(r'^party/?$', views.party), 
 	url(r'^retreat/?$', views.simple_page('retreat.html')), 
+	url(r'^apply/gatherer/?$', views.simple_page('apply_gatherer.html')), 
+	url(r'^apply/residency/?$', views.simple_page('apply_residency.html')), 
+	url(r'^apply/builder/?$', views.simple_page('apply_builder.html')), 
+	url(r'^apply/naturalist/?$', views.simple_page('apply_naturalist.html')), 
+	url(r'^apply/coliving/?$', views.simple_page('apply_coliving.html')), 
+	url(r'^projects/?$', views.simple_page('projects.html')), 
     path('admin/', admin.site.urls),
     path('', views.main),
 ]
