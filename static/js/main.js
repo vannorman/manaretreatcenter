@@ -162,16 +162,19 @@ function InitCarousel1(){
 
 }
 function InitCarousel2(){
+    let carouselInterval=null;
     $('#carousel2 .navLeft').on('click',function(){
         if (carousel_2_index > 0) carousel_2_index--;
         img = carousel_2_index+1;
         $('#carousel2 .image').css('background-image','url(/static/img/a'+img+'.jpg)');
+        clearInterval(carouselInterval);
     });
     $('#carousel2 .navRight').on('click',function(){
 //        console.log("r. len:"+$('#carousel2 .thumbsContainer .thumb').length);
         if (carousel_2_index < $('#carousel2 .thumbsContainer .thumb').length-1) carousel_2_index++;
         img = carousel_2_index+1;
         $('#carousel2 .image').css('background-image','url(/static/img/a'+img+'.jpg)');
+        clearInterval(carouselInterval);
     });
 
 
@@ -188,10 +191,12 @@ function InitCarousel2(){
     $('#carousel2 .thumbsContainer .thumb').each(function(){
         let i = $(this).index() + 1;
         $(this).css('background-image','url(/static/img/'+'a'+i+'.jpg)');
+        clearInterval(carouselInterval);
     });
     $('#carousel2 #under .thumb').on('click',function(){
         img = $(this).index()+1; 
         $('#carousel2 .image').css('background-image','url(/static/img/a'+img+'.jpg)');
+        clearInterval(carouselInterval);
 
     });
     let [minLeft,maxLeft,cw] = RecalculateCarousel(tc);
@@ -199,6 +204,7 @@ function InitCarousel2(){
     var clicked = false;
     $('#carousel2 #under .left').on('click',function(){
         if (clicked) return;
+        clearInterval(carouselInterval);
         clicked = true;
         left = parseInt($('#under .thumb').css('left'));
         if (left < maxLeft){
@@ -214,6 +220,7 @@ function InitCarousel2(){
     });
     $('#carousel2 #under .right').on('click',function(){
         if (clicked) return;
+        clearInterval(carouselInterval);
         clicked = true;
         left = parseInt($('#carousel2 #under .thumb').css('left'));
         if (left > minLeft + 5){
@@ -227,6 +234,13 @@ function InitCarousel2(){
             }); 
         }
     });
+
+    carouselInterval = setInterval(function(){
+        if (carousel_2_index < 4) carousel_2_index++;
+        else carousel_2_index=0;
+        img = carousel_2_index+1;
+        $('#carousel2 .image').css('background-image','url(/static/img/a'+img+'.jpg)');
+    },2500)
 
 }
 
