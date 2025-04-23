@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
 	'manaretreat.center',
 	'127.0.0.1',
     '143.198.79.233',
+    'localhost'
 	]
 
 

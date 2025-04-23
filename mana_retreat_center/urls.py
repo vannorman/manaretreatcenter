@@ -20,6 +20,7 @@ from django.urls import path
 
 urlpatterns = [
 	url(r'^party/?$', views.party), 
+	url(r'^index2/?$', views.simple_page('index2.html')), 
 	url(r'^retreat/?$', views.simple_page('retreat.html')), 
 	url(r'^photos/?$', views.simple_page('photos.html')), 
 	url(r'^apply/gatherer/?$', views.simple_page('apply_gatherer.html')), 
