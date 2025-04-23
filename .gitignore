@@ -9,3 +9,5 @@ venv/
 error.log
 push.sh
 static/montage.mp4
+*.pyc
+

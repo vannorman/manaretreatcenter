@@ -180,7 +180,7 @@ function InitCarousel2(){
 
     $('#carousel2 .image').css('background-image','url(/static/img/a1.jpg)');
   
-    let numThumbs = 11;
+    let numThumbs = 10;
     let thumbsPrefix = "prop_";
     for(let i=0;i<numThumbs;i++){
         $('#carousel2 .thumbsContainer .thumbs').append('<div class="thumb"></div>');

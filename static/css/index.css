@@ -354,6 +354,7 @@ cursor:pointer;
 	background-color: #34b4eb;
     color:white;
     transition: all 0.3s;
+    cursor:pointer;
 }
 
 .teacher a {
